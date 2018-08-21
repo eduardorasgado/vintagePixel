@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# libreria importada para hello_world
+from django.http import HttpResponse
+
+def hello_world(request):
+    """
+    El requet es obligatorio
+    """
+    return HttpResponse('Hello Django :)')
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # http://127.0.0.1:8000/hello-world/
+    path("hello-world/", hello_world)
 ]
