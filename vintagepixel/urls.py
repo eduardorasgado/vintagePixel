@@ -13,18 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+# from django.contrib import admin
 from django.urls import path
-# libreria importada para hello_world
-from django.http import HttpResponse
-
-def hello_world(request):
-    """
-    El requet es obligatorio
-    """
-    return HttpResponse('Hello Django :)')
+from vintagepixel import views
 
 urlpatterns = [
     # http://127.0.0.1:8000/hello-world/
-    path("hello-world/", hello_world)
+    path("hello-world/", views.hello_world)
 ]
