@@ -24,6 +24,7 @@ def hi(request):
 
     # tomando los valores de los numbers enviados
     # y obtenidos por get
+    # http://127.0.0.1:8000/hi/?numbers=8,3,9,1
     if not 'numbers' in request.GET:
         return HttpResponse("NO numbers")
 
